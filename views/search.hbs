@@ -1,0 +1,28 @@
+            <div class="content mt-0 mb-0">
+                <div class="search-box search-dark shadow-xl border-0 bg-theme rounded-sm bottom-0">
+                    <i class="fa fa-search"></i>
+                    <input type="text" class="border-0" onkeyup="searchPromotion(this)" placeholder="Search here..." id="searchBox">
+                    <script>
+                        searchValue = localStorage.searchValue;
+                        if (searchValue) {
+                            document.querySelector('#searchBox').value = searchValue;
+                            //searchFromApi(searchValue)
+                        }
+                    </script>
+                </div>
+                <div class="search-results">
+                    <div id="resultsContainer" class="list-group list-custom-large"></div>
+                </div>
+                <div class="search-no-results disabled mt-4">
+                    <div class="card card-style mx-0">
+                        <div class="content">
+                            <p class="mb-n1 font-600 color-highlight">Sorry, there are</p>
+                            <h1>No Results</h1>
+                            <p>
+                                Your search brought up no results. Try using a different keyword. Or try typying all
+                                to see all items in the demo. These can be linked to anything you want.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>

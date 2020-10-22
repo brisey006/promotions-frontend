@@ -1,0 +1,36 @@
+            <div class="card card-style" style="background-image: url({{promotion.displayImage.original}});" data-card-height="300">
+                <div class="card-top">
+                    <a href="#" data-menu="menu-heart" class="icon icon-s bg-white color-red-dark rounded-xl mt-3 ml-3"><i class="fa fa-heart"></i></a>
+                    <a href="{{promotion.displayImage.original}}" title="{{promotion.title}}" data-lightbox="gallery-1" class="icon icon-s bg-white color-black rounded-xl mt-3 ml-2"><i class="fa fa-expand"></i></a>
+                </div>
+                <div class="card-bottom mb-3 ml-3 mr-3"></div>
+                <div class="card-overlay bg-black opacity-60"></div>
+            </div>
+            <div class="card card-style">
+                <div class="content">
+                    <h1 class="mb-0">{{promotion.title}}</h1>
+                    <p class="mb-4 opacity-70">{{promotion.description}}</p>
+                    <div class="d-flex">
+                        <div class="mr-auto align-self-center">
+                            <h2 class="pt-1 mr-3 font-700">{{formatDate promotion.expiry}}</h2>
+                            <p class="font-400 font-12 mt-n2 opacity-50">Promotion expiry date</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-style">
+                <div class="content">
+                    <p class="font-600 color-highlight mb-n1">Business details</p>
+                    <h4>{{promotion.page.name}}</h4>
+                    <p>{{promotion.page.description}}</p>
+                    <div class="divider mt-3"></div>
+                    <p class="font-600 color-highlight mb-n1">Contact Details</p>
+                    <h4>Address</h4>
+                    <p>{{promotion.page.address}}</p>
+                    <h4>Phone Number</h4>
+                    <p>{{promotion.page.phoneNumber}}</p>
+                    <h4>Email</h4>
+                    <p>{{promotion.page.email}}</p>
+                   <a href="tel:{{promotion.page.phoneNumber}}" class="btn btn-full gradient-highlight font-13 btn-m font-600 mt-3 rounded-s">Call Business</a>
+                </div>
+            </div>

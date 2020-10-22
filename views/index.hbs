@@ -1,0 +1,29 @@
+               <div class="card card-style">
+                  <div class="content mb-0">
+                     {{#each data.docs}}
+                     <div class="row mb-0">
+                        <div class="col-6 mb-4 pr-0">
+                           <a href="/view/{{this.slug}}"><img src="{{this.displayImage.thumbnail}}" class="rounded-sm shadow-xl img-fluid"></a>
+                        </div>
+                        <div class="col-6">
+                           <a href="#" class="d-block">
+                                <i class="fa fa-star color-yellow-dark"></i>
+                                <i class="fa fa-star color-yellow-dark"></i>
+                                <i class="fa fa-star color-yellow-dark"></i>
+                                <i class="fa fa-star color-yellow-dark"></i>
+                                <i class="fa fa-star color-yellow-dark"></i><br>
+                            </a>
+                           <a href="/view/{{this.slug}}">
+                              <h5 class="mb-0">{{this.title}}</h5>
+                              <span class="color-green-dark font-12">{{this.page.name}}</span><br>
+                              <span class="color-dark-light font-12">{{shorten this.description limit=25}}</span>
+                           </a>
+                           <h4 class="mt-1 mb-n2 font-700">{{currentPrice this.prices}}</h4>
+                           <span class="opacity-50 font-11"><del>{{previousPrice this.prices}}</del></span>
+                        </div>
+                     </div>
+                     {{/each}}
+                  </div>
+               </div>
+
+               {{>pagination}}
